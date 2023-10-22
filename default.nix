@@ -1,13 +1,9 @@
-{ stdenv, qtbase, full, qmake, wrapQtAppsHook }:
+{ lib, stdenv, cmake, qt6, wrapQtAppsHook }:
 stdenv.mkDerivation {
   pname = "vmae";
   version = "1.0";
 
   src = ./.;
-  buildInputs = [ qtbase ];
-  nativeBuildInputs = [ qmake wrapQtAppsHook ];
-  installPhase = ''
-    mkdir -p $out
-    cp -r vmae.app $out
-  '';
+  nativeBuildInputs = [ cmake wrapQtAppsHook ];
+  buildInputs = [ qt6.qtbase ];
 }

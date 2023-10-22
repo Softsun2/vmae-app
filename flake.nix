@@ -14,10 +14,6 @@
           lldb
           ccls
         ];
-        shellHook = ''
-          # add qt module frameworks to properly wrap ccls
-          export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -iframework ${pkgs.qt6.qtbase}/lib"
-        '';
       };
     };
 }

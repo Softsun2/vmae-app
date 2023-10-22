@@ -1,2 +1,10 @@
 result
+
 .ccls-cache
+.qt
+
+CMakeFiles
+CMakeCache.txt
+
+compile_commands.json
+cmake_install.cmake
