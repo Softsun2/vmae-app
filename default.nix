@@ -4,14 +4,8 @@ stdenv.mkDerivation {
   version = "1.0";
 
   src = ./.;
-  buildInputs = [
-    qtbase
-    full
-  ];
-  nativeBuildInputs = [
-    qmake
-    wrapQtAppsHook
-  ];
+  buildInputs = [ qtbase ];
+  nativeBuildInputs = [ qmake wrapQtAppsHook ];
   installPhase = ''
     mkdir -p $out
     cp -r vmae.app $out
