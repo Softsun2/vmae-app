@@ -15,14 +15,8 @@
           ccls
         ];
         shellHook = ''
-          # These headers map to those required in ./vmae.pro.
-          # This allows allow ccls to locate qt system headers (manually).
-          # Ideally this would be done in a compile_commands.json but I'm
-          # avoiding cmake for now; so I need a way to know the nix paths
-          # beforehand.
-
-          # Add additional system headers to properly wrap ccls:
-          export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -isystem ${pkgs.qt6.qtbase}/lib/QtWidgets.framework/Headers"
+          # add qt module frameworks to properly wrap ccls
+          export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -iframework ${pkgs.qt6.qtbase}/lib"
         '';
       };
     };

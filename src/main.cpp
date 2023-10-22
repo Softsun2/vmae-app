@@ -1,9 +1,6 @@
-#include <QApplication>
-#include <QLabel>
+#include <QtWidgets/QApplication>
 
 int main(int argc, char **argv) {
- QApplication app(argc, argv);
- QLabel label("Hello, world!");
- label.show();
- return app.exec();
+  QApplication app(argc, argv);
+  return app.exec();
 }
