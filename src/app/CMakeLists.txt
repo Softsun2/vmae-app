@@ -10,3 +10,5 @@ set_target_properties(app PROPERTIES
     WIN32_EXECUTABLE ON
     MACOSX_BUNDLE ON
 )
+
+install(TARGETS app DESTINATION .)
